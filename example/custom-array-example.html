@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body div="container">
+    <div class="row justify-content-center">
+
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    Example Labels
+                </div>
+                    
+                <div class="card-body edit-area">
+                
+                    <div class="row">
+                        <div class="col-lg-6">
+                            Text : <label data-editor-for="text">Text Message</label>
+                        </div>
+                        <div class="col-lg-6">
+                            Number : <label data-editor-for="number">168</label>
+                        </div>
+                        <div class="col-lg-6">
+                            Date : <label data-editor-for="date">2018-12-11</label>
+                        </div>
+                        <div class="col-lg-6">
+                            Select : <label data-editor-for="select">C</label>
+                        </div>
+                        <div class="col-lg-6">
+                            Radio : <label data-editor-for="radio">B</label>
+                        </div>
+                        <div class="col-lg-6">
+                            CheckBox : <label data-editor-for="checkbox[]">{B D></label>
+                        </div>
+                        <div class="col-lg-12">
+                            <button data-editor="#editor" id="edit" class="btn btn-info btn-block">Edit</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+           
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    Example Input
+                </div>
+                    
+                <div id="editor" class="card-body edit-area">
+                
+                    <div class="row">
+                        <div class="col-lg-12 form-group">
+
+                            <input class="form-control" type="text" name="text">
+                        </div>
+                        <div class="col-lg-12 form-group">
+                            <input type="number" name="number" class="form-control">
+                        </div>
+                        <div class="col-lg-12 form-group">
+                            <input type="date" name="date" class="form-control">
+                        </div>
+                        <div class="col-lg-12 form-group">
+                            <select name="select" class="form-control">
+                                <option>A</option>
+                                <option>B</option>
+                                <option>C</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <label>A</label>
+                            <input type="radio" name="radio" value="A">
+                            
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <label>B</label>
+                            <input type="radio" name="radio" value="B">
+                        </div>
+                        <div class="col-lg-3 form-group">
+                            <label>A</label>
+                            <input type="checkbox" name="checkbox[]" value="A">
+                        </div>
+                        <div class="col-lg-3 form-group">
+                            <label>B</label>
+                            <input type="checkbox" name="checkbox[]" value="B">
+                        </div>
+                        <div class="col-lg-3 form-group">
+                            <label>C</label>
+                            <input type="checkbox" name="checkbox[]" value="C">
+                        </div>
+                        <div class="col-lg-3 form-group">
+                            <label>D</label>
+                            <input type="checkbox" name="checkbox[]" value="D">
+                        </div>
+
+                        <div class="col-lg-12">
+                            <button id="save" class="btn btn-info btn-block">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../storkeditor.js"></script>
+    
+    <script type="text/javascript">
+        var stork;
+        $(document).ready(function(){
+            $("#edit").click(function(){
+                stork = $(this).stork({startWith : "{", splitBy:" ", endWith:">"});
+                stork.TextToInput();
+            })
+
+            $("#save").click(function(){
+                stork.InputToText();
+            })
+        })
+    </script>
+</body>
+</html>
