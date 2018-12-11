@@ -1,5 +1,5 @@
 # Stork-Editor
-The plugin is build for move text to input value with blcok form, like stork ( 送值鳥 )
+The plugin is build for move text to input value, like stork ( 送值鳥 )
 
 ## Demo
 ![](assets/demo.gif)
