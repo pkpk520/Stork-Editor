@@ -11,19 +11,19 @@ JQuery 3.3.1
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 ```
 
-##Usage
+## Usage
 
-include js file
+1. include js file
 ```html
 <script type="text/javascript" src="storkeditor.js"></script>
 ```
-1. you need set html dom, use class edit-area to limit stork activity range
+2. you need set html dom, use class edit-area to limit stork activity range
 ```html
 <div class="edit-area">
 </div>
 ```
 
-2. give data-editor attritube to trigger, stork will search your input container by it 
+3. give data-editor attritube to trigger, stork will search your input container by it 
 ```html
 <div class="edit-area">
     <button id="edit" data-editor="#editor"> edit </button>
@@ -32,7 +32,7 @@ include js file
 </div>
 ```
 
-3. then stork move value , text -> input value, use data-editor-for to specify input
+4. then stork move value , text -> input value, use data-editor-for to specify input
 ```html
 <div class="edit-area">
     <label data-editor-for="test">hello world</label>
@@ -43,7 +43,7 @@ include js file
 </div>
 ```
 
-4. create Stork when you need, it will find parents which have "edit-area" class
+5. create Stork when you need, it will find parents which have "edit-area" class
 ```js
 $("#edit").click(function(){
     strok = $("something").stork({})
@@ -56,7 +56,7 @@ $("#edit").click(function(){
 })
 ```
 
-5. move text to input value 
+6. move text to input value 
 ```js
 var stork
 
@@ -66,7 +66,7 @@ $("#edit").click(function(){
 })
 ```
 
-6. move input value to text
+7. move input value to text
 ```js
 $("#save").click(function(){
     stork.InputToText()
@@ -94,3 +94,4 @@ strok = $("something").stork({
 })
 ```
 
+<a href="https://github.com/pkpk520/Stork-Editor/tree/master/example">Example</a>
