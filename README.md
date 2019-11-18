@@ -46,13 +46,13 @@ JQuery 3.3.1
 5. create Stork when you need, it will find parents which have "edit-area" class
 ```js
 $("#edit").click(function(){
-    strok = $(this).stork({})
+    stork = $(this).stork({})
 })
 ```
 or you want use custom class
 ```js
 $("#edit").click(function(){
-    strok = $(this).stork({ area : "your-class" })
+    stork = $(this).stork({ area : "your-class" })
 })
 ```
 
@@ -61,7 +61,7 @@ $("#edit").click(function(){
 var stork
 
 $("#edit").click(function(){
-    strok = $(this).stork({ area : "your-class" })
+    stork = $(this).stork({ area : "your-class" })
     stork.TextToInput()
 })
 ```
